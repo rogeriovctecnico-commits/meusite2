@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      RVC Assessoria | Planos de Saúde Grande Vitória | Rogério Vieira
+    </title>
+    <meta
+      name="description"
+      content="RVC Assessoria — Rogério Vieira, consultor especialista em planos de saúde na Grande Vitória. Pessoa Física, MEI, Familiar e Empresarial. Cotação gratuita!"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo">RVC<span> Assessoria</span></div>
+      <a href="#cotacao" class="header-cta">Cotação Grátis →</a>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-badge">
+          ✦ Rogério Vieira · RVC Assessoria · Grande Vitória
+        </div>
+        <h1>O plano de saúde <em>certo</em> pra você, sem enrolação</h1>
+        <p>
+          Pessoa física, MEI, família ou empresa — comparo todas as operadoras
+          da Grande Vitória e encontro a melhor cobertura pelo menor preço.
+        </p>
+
+        <!-- FORM -->
+        <div class="form-hero" id="cotacao">
+          <h2>Receba sua cotação gratuita</h2>
+          <p class="sub">Resposta em até 2 horas · Sem compromisso</p>
+          <form class="form-row" id="leadForm" onsubmit="enviarLead(event)">
+            <div class="field-group">
+              <label>Nome completo</label>
+              <input type="text" placeholder="Seu nome" required />
+            </div>
+            <div class="field-group">
+              <label>WhatsApp</label>
+              <input
+                type="tel"
+                placeholder="(27) 99999-9999"
+                required
+                id="telefone"
+              />
+            </div>
+            <div class="field-group">
+              <label>Tipo de plano</label>
+              <div class="select-wrap">
+                <select required>
+                  <option value="">Selecione...</option>
+                  <option>Pessoa Física / Familiar</option>
+                  <option>MEI / Autônomo</option>
+                  <option>Empresarial (PME)</option>
+                  <option>Quero comparar todas as opções</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-group">
+              <label>Cidade</label>
+              <div class="select-wrap">
+                <select required>
+                  <option value="">Selecione sua cidade</option>
+                  <option>Vitória</option>
+                  <option>Vila Velha</option>
+                  <option>Serra</option>
+                  <option>Cariacica</option>
+                  <option>Viana</option>
+                  <option>Guarapari</option>
+                  <option>Fundão</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn-submit" id="btnSubmit">
+              Quero minha cotação gratuita →
+            </button>
+          </form>
+          <p class="form-privacidade">
+            🔒 Seus dados estão protegidos. Não enviamos spam.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPERADORAS -->
+    <div class="strip">
+      <div class="strip-inner">
+        <span class="strip-label">Operadoras parceiras</span>
+        <span class="op-badge">Medsenior</span>
+        <span class="op-badge">Best Senior</span>
+        <span class="op-badge">Unimed</span>
+        <span class="op-badge">Amil</span>
+        <span class="op-badge">SulAmérica</span>
+        <span class="op-badge">Bradesco Saúde</span>
+        <span class="op-badge">Porto Seguro</span>
+        <span class="op-badge">Hapvida</span>
+        <span class="op-badge">NotreDame</span>
+        <span class="op-badge">São Bernardo Samp</span>
+        <span class="op-badge">Bluzz Saúde</span>
+      </div>
+    </div>
+
+    <!-- BENEFÍCIOS -->
+    <section class="section">
+      <div class="section-inner">
+        <p class="section-tag fade-up">Por que me escolher</p>
+        <h2 class="fade-up">
+          Consultoria especializada,<br />resultado garantido
+        </h2>
+        <div class="cards-grid">
+          <div class="card fade-up">
+            <div class="card-icon">🔍</div>
+            <h3>Comparação real</h3>
+            <p>
+              Analiso todas as operadoras disponíveis na Grande Vitória e
+              apresento as melhores opções com cobertura e preço comparados.
+            </p>
+          </div>
+          <div class="card fade-up">
+            <div class="card-icon">💰</div>
+            <h3>Sem custo adicional</h3>
+            <p>
+              Meu serviço é gratuito pra você. A corretagem é paga pelas
+              operadoras — você paga o mesmo preço de tabela, com mais
+              vantagens.
+            </p>
+          </div>
+          <div class="card fade-up">
+            <div class="card-icon">📋</div>
+            <h3>Processo facilitado</h3>
+            <p>
+              Cuido de toda a burocracia, documentação e adesão. Você só precisa
+              escolher o plano e aproveitar a cobertura.
+            </p>
+          </div>
+          <div class="card fade-up">
+            <div class="card-icon">🤝</div>
+            <h3>Suporte contínuo</h3>
+            <p>
+              Não sumo após a venda. Estou disponível para dúvidas, reembolsos e
+              qualquer questão com a operadora.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPOS DE PLANO -->
+    <section class="tipos">
+      <div class="section-inner">
+        <p class="section-tag">Atendo todos os perfis</p>
+        <h2 class="fade-up">Qual é o seu caso?</h2>
+        <div class="tipo-cards">
+          <div class="tipo-card fade-up">
+            <span class="tipo-icon">👤</span>
+            <h3>Pessoa Física</h3>
+            <p>
+              Plano individual ou familiar com a cobertura que você precisa e o
+              preço que cabe no bolso.
+            </p>
+          </div>
+          <div class="tipo-card fade-up">
+            <span class="tipo-icon">🏢</span>
+            <h3>Empresarial PME</h3>
+            <p>
+              Para empresas de 2 a 99 vidas. Cobertura corporativa com condições
+              especiais de negociação.
+            </p>
+          </div>
+          <div class="tipo-card fade-up">
+            <span class="tipo-icon">💼</span>
+            <h3>MEI / Autônomo</h3>
+            <p>
+              Plano empresarial para MEI com preços menores que o individual.
+              Uma das melhores oportunidades do mercado.
+            </p>
+          </div>
+          <div class="tipo-card fade-up">
+            <span class="tipo-icon">👨‍👩‍👧‍👦</span>
+            <h3>Plano Familiar</h3>
+            <p>
+              Inclua cônjuge, filhos e dependentes com cobertura completa e
+              desconto por adesão.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="processo">
+      <div class="section-inner">
+        <p class="section-tag fade-up">Como funciona</p>
+        <h2 class="fade-up" style="text-align: center">Simples assim</h2>
+        <div class="steps">
+          <div class="step fade-up">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h3>Você preenche o formulário</h3>
+              <p>
+                Me conta seu perfil, cidade e o que precisa de cobertura. Leva
+                menos de 1 minuto.
+              </p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h3>Eu faço a análise</h3>
+              <p>
+                Comparo as operadoras disponíveis na sua região e filtro as
+                melhores opções pro seu caso.
+              </p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h3>Apresento as cotações</h3>
+              <p>
+                Envio por WhatsApp um comparativo claro com cobertura, carências
+                e valores de cada plano.
+              </p>
+            </div>
+          </div>
+          <div class="step fade-up">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h3>Você decide, eu resolvo</h3>
+              <p>
+                Escolheu? Cuido de toda a contratação. Em poucos dias seu plano
+                já está ativo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stats-inner">
+        <div class="fade-up">
+          <div class="stat-num">500<span>+</span></div>
+          <div class="stat-label">Clientes atendidos na Grande Vitória</div>
+        </div>
+        <div class="fade-up">
+          <div class="stat-num">7<span>+</span></div>
+          <div class="stat-label">Operadoras parceiras no ES</div>
+        </div>
+        <div class="fade-up">
+          <div class="stat-num">10<span>m</span></div>
+          <div class="stat-label">Tempo médio de retorno</div>
+        </div>
+        <div class="fade-up">
+          <div class="stat-num">5<span>★</span></div>
+          <div class="stat-label">Avaliação média dos clientes</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos section">
+      <div class="section-inner">
+        <p class="section-tag fade-up">Depoimentos</p>
+        <h2 class="fade-up">
+          O que dizem meus clientes
+          <span
+            style="font-size: 16px; font-weight: 400; color: var(--verde-claro)"
+            >— avaliações reais do Google</span
+          >
+        </h2>
+        <div class="depo-grid">
+          <div class="depo fade-up">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Rogério é um ótimo corretor. Me ajudou muito na procura de um
+              plano para mim e minha família. Super recomendo."
+            </p>
+            <div class="depo-autor">
+              <div class="avatar">VB</div>
+              <div>
+                <div class="depo-nome">Vinicius Brasil Augusto</div>
+                <div class="depo-cidade">Avaliação Google ✓</div>
+              </div>
+            </div>
+          </div>
+          <div class="depo fade-up">
+            <div class="stars">★★★★★</div>
+            <p>"Excelente profissional rápido e de confiança!"</p>
+            <div class="depo-autor">
+              <div class="avatar">JM</div>
+              <div>
+                <div class="depo-nome">Joelson Monteiro</div>
+                <div class="depo-cidade">Avaliação Google ✓</div>
+              </div>
+            </div>
+          </div>
+          <div class="depo fade-up">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Bom dia, gostaria de agradecer o excelente profissional que o
+              Rogério é, sempre nos atendeu com agilidade e presteza. Continue
+              assim sempre."
+            </p>
+            <div class="depo-autor">
+              <div class="avatar">AD</div>
+              <div>
+                <div class="depo-nome">Abimael Dantas Lima</div>
+                <div class="depo-cidade">Avaliação Google ✓</div>
+              </div>
+            </div>
+          </div>
+          <div class="depo fade-up">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Me orientou muito bem numa dúvida sobre o meu plano de saúde
+              MedSenior."
+            </p>
+            <div class="depo-autor">
+              <div class="avatar">RF</div>
+              <div>
+                <div class="depo-nome">Rosa Frinhani</div>
+                <div class="depo-cidade">Avaliação Google ✓</div>
+              </div>
+            </div>
+          </div>
+          <div class="depo fade-up">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Profissional de primeira grandeza... muito bom, nos atendeu muito
+              bem, vamos recomendar para os amigos."
+            </p>
+            <div class="depo-autor">
+              <div class="avatar">PV</div>
+              <div>
+                <div class="depo-nome">Periclys Vieira</div>
+                <div class="depo-cidade">Avaliação Google ✓</div>
+              </div>
+            </div>
+          </div>
+          <div class="depo fade-up">
+            <div class="stars">★★★★★</div>
+            <p>"Excelente profissional, muito atencioso."</p>
+            <div class="depo-autor">
+              <div class="avatar">EZ</div>
+              <div>
+                <div class="depo-nome">Eliane Zanetti</div>
+                <div class="depo-cidade">Avaliação Google ✓</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+      <div class="cta-box">
+        <h2>Pronto pra cuidar da sua saúde?</h2>
+        <p>
+          Me chame agora pelo WhatsApp e receba sua cotação personalizada ainda
+          hoje. É rápido, gratuito e sem compromisso.
+        </p>
+        <a
+          href="https://wa.me/5527995277207?text=Olá!%20Gostaria%20de%20uma%20cotação%20de%20plano%20de%20saúde"
+          class="btn-wpp"
+          target="_blank"
+        >
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 a01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 a01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 a012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 a0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 a005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 a00-3.48-8.413z"
+            />
+          </svg>
+          Falar no WhatsApp agora
+        </a>
+        <br />
+        <a href="tel:+5527995277207" class="btn-tel"
+          >📞 Prefere ligar? (27) 99999-9999</a
+        >
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        RVC Assessoria · Consultor Rogério Vieira · Grande Vitória, ES<br />
+        Corretor de Planos de Saúde credenciado · ANS<br />
+        © 2025 · Todos os direitos reservados
+      </p>
+    </footer>
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a
+      href="https://wa.me/5527995277207?text=Olá!%20Gostaria%20de%20uma%20cotação%20de%20plano%20de%20saúde"
+      class="wpp-float"
+      target="_blank"
+      title="Fale pelo WhatsApp"
+    >
+      <svg viewBox="0 0 24 24">
+        <path d="M17.472 14.382c...z" />
+      </svg>
+    </a>
+    <script src="script.js" defer></script>
+  </body>
+</html>
