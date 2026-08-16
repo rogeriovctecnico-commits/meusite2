@@ -9,6 +9,20 @@
   </title>
   <meta name="description"
     content="RVC Assessoria — Rogério Vieira, consultor especialista em planos de saúde na Grande Vitória. Pessoa Física, MEI, Familiar e Empresarial. Cotação gratuita!" />
+  <link rel="canonical" href="https://www.rvcplanosdesaude.com.br/" />
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230F3D2B'/%3E%3Ctext x='50' y='68' font-size='54' font-family='Georgia,serif' font-weight='700' fill='%23C8972A' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E" />
+
+  <!-- Open Graph / WhatsApp / Facebook preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="RVC Assessoria" />
+  <meta property="og:title" content="RVC Assessoria | Planos de Saúde Grande Vitória" />
+  <meta property="og:description"
+    content="Cotação gratuita de plano de saúde na Grande Vitória. Comparo todas as operadoras e encontro a melhor cobertura pelo menor preço." />
+  <meta property="og:url" content="https://www.rvcplanosdesaude.com.br/" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,13 +31,32 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=DM+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Dados estruturados (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "InsuranceAgency",
+    "name": "RVC Assessoria",
+    "founder": "Rogério Vieira",
+    "areaServed": ["Vitória", "Vila Velha", "Serra", "Cariacica", "Viana", "Guarapari", "Fundão"],
+    "url": "https://www.rvcplanosdesaude.com.br/",
+    "telephone": "+5527995277207",
+    "priceRange": "Gratuito para o cliente",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "ES",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
 </head>
 
 <body>
   <!-- HEADER -->
   <header>
     <div class="logo">RVC<span> Assessoria</span></div>
-    <a href="#cotacao" class="header-cta">Cotação Grátis →</a>
+    <a href="#cotacao-section" class="header-cta">Cotação Grátis →</a>
   </header>
 
   <!-- HERO -->
@@ -38,53 +71,47 @@
         da Grande Vitória e encontro a melhor cobertura pelo menor preço.
       </p>
 
-      <!-- FORM -->
-      <div class="form-hero" id="cotacao">
-        <h2>Receba sua cotação gratuita</h2>
-        <p class="sub">Resposta em até 2 horas · Sem compromisso</p>
-        <form class="form-row" id="leadForm" onsubmit="enviarLead(event)">
-          <div class="field-group">
-            <label>Nome completo</label>
-            <input type="text" placeholder="Seu nome" required />
-          </div>
-          <div class="field-group">
-            <label>WhatsApp</label>
-            <input type="tel" placeholder="(27) 99999-9999" required id="telefone" />
-          </div>
-          <div class="field-group">
-            <label>Tipo de plano</label>
-            <div class="select-wrap">
-              <select required>
-                <option value="">Selecione...</option>
-                <option>Pessoa Física / Familiar</option>
-                <option>MEI / Autônomo</option>
-                <option>Empresarial (PME)</option>
-                <option>Quero comparar todas as opções</option>
-              </select>
+      <div class="hero-actions">
+        <a href="https://wa.me/5527995277207?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20cotação." class="btn-hero-secondary">Falar direto no WhatsApp 💬</a>
+      </div>
+
+      <!-- Formulário principal (único formulário do site) -->
+      <div class="hero-form-card" id="cotacao-section">
+        <form id="leadFormTop" class="form-dark" onsubmit="return false;">
+          <!-- Honeypot Anti-Spam -->
+          <input type="text" name="website" id="website-top" class="hp-field" tabindex="-1" autocomplete="off">
+
+          <div class="form-grid">
+            <div class="field-group full-width">
+              <label for="nome-top">Nome Completo *</label>
+              <input type="text" id="nome-top" name="nome" placeholder="Seu nome" required>
+            </div>
+
+            <div class="field-group full-width">
+              <label for="telefone-top">WhatsApp *</label>
+              <input type="tel" id="telefone-top" name="telefone" placeholder="(27) 99999-9999" required>
+            </div>
+
+            <div class="full-width">
+              <label class="consent-group">
+                <input type="checkbox" id="lgpd-top" name="lgpd" required checked>
+                <span>Concordo em ser contatado e autorizo o uso dos meus dados para a cotação (LGPD).</span>
+              </label>
             </div>
           </div>
-          <div class="field-group">
-            <label>Cidade</label>
-            <div class="select-wrap">
-              <select required>
-                <option value="">Selecione sua cidade</option>
-                <option>Vitória</option>
-                <option>Vila Velha</option>
-                <option>Serra</option>
-                <option>Cariacica</option>
-                <option>Viana</option>
-                <option>Guarapari</option>
-                <option>Fundão</option>
-              </select>
-            </div>
+
+          <div class="button-group hero-button-group">
+            <button type="button" class="btn-action btn-whatsapp" onclick="processarEnvio('whatsapp', this)">
+              <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.157 4.228 4.301-1.129z"/></svg>
+              Receber no WhatsApp
+            </button>
+
+            <button type="button" class="btn-action btn-contact" onclick="processarEnvio('salvar', this)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Só Deixar Meu Contato
+            </button>
           </div>
-          <button type="submit" class="btn-submit" id="btnSubmit">
-            Quero minha cotação gratuita →
-          </button>
         </form>
-        <p class="form-privacidade">
-          🔒 Seus dados estão protegidos. Não enviamos spam.
-        </p>
       </div>
     </div>
   </section>
@@ -106,6 +133,29 @@
       <span class="op-badge">Bluzz Saúde</span>
     </div>
   </div>
+
+  <!-- PROMOÇÃO MEDSÊNIOR -->
+  <section class="promo-banner">
+    <div class="section-inner">
+      <p class="section-tag fade-up">Promoção por tempo limitado</p>
+      <h2 class="fade-up">MedSênior com Carência Zero</h2>
+      <div class="promo-grid">
+        <a class="promo-card fade-up"
+          href="https://wa.me/5527995277207?text=Olá!%20Vi%20a%20promoção%20MedSênior%20Carência%20Zero%20Pessoa%20Física%20e%20quero%20mais%20informações."
+          target="_blank">
+          <img src="assets/medsenior_campanha_mochila.jpeg"
+            alt="Promoção MedSênior Pessoa Física com Carência Zero — tabela de preços a partir de R$545,51" loading="lazy">
+        </a>
+        <a class="promo-card fade-up"
+          href="https://wa.me/5527995277207?text=Olá!%20Vi%20a%20promoção%20MedSênior%20Carência%20Zero%20PME%20e%20quero%20mais%20informações."
+          target="_blank">
+          <img src="assets/medsenior_campanha_mochila2.jpeg"
+            alt="Promoção MedSênior Empresarial PME com Carência Zero — tabela de preços a partir de R$490,95" loading="lazy">
+        </a>
+      </div>
+      <p class="promo-note fade-up">Contrate com a RVC Assessoria e ganhe uma mochila. Clique na imagem pra falar comigo no WhatsApp.</p>
+    </div>
+  </section>
 
   <!-- BENEFÍCIOS -->
   <section class="section">
@@ -225,8 +275,7 @@
           <div class="step-body">
             <h3>Apresento as cotações</h3>
             <p>
-              Envio por WhatsApp um comparativo claro com cobertura, carências
-              e valores de cada plano.
+              Envio o comparativo claro com cobertura, carências e valores de cada plano.
             </p>
           </div>
         </div>
@@ -304,8 +353,7 @@
           <div class="stars">★★★★★</div>
           <p>
             "Bom dia, gostaria de agradecer o excelente profissional que o
-            Rogério é, sempre nos atendeu com agilidade e presteza. Continue
-            assim sempre."
+            Rogério é, sempre nos atendeu com agilidade e presteza."
           </p>
           <div class="depo-autor">
             <div class="avatar">AD</div>
@@ -315,67 +363,24 @@
             </div>
           </div>
         </div>
-        <div class="depo fade-up">
-          <div class="stars">★★★★★</div>
-          <p>
-            "Me orientou muito bem numa dúvida sobre o meu plano de saúde
-            MedSenior."
-          </p>
-          <div class="depo-autor">
-            <div class="avatar">RF</div>
-            <div>
-              <div class="depo-nome">Rosa Frinhani</div>
-              <div class="depo-cidade">Avaliação Google ✓</div>
-            </div>
-          </div>
-        </div>
-        <div class="depo fade-up">
-          <div class="stars">★★★★★</div>
-          <p>
-            "Profissional de primeira grandeza... muito bom, nos atendeu muito
-            bem, vamos recomendar para os amigos."
-          </p>
-          <div class="depo-autor">
-            <div class="avatar">PV</div>
-            <div>
-              <div class="depo-nome">Periclys Vieira</div>
-              <div class="depo-cidade">Avaliação Google ✓</div>
-            </div>
-          </div>
-        </div>
-        <div class="depo fade-up">
-          <div class="stars">★★★★★</div>
-          <p>"Excelente profissional, muito atencioso."</p>
-          <div class="depo-autor">
-            <div class="avatar">EZ</div>
-            <div>
-              <div class="depo-nome">Eliane Zanetti</div>
-              <div class="depo-cidade">Avaliação Google ✓</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL -->
-  <section class="cta-final">
-    <div class="cta-box">
-      <h2>Pronto pra cuidar da sua saúde?</h2>
-      <p>
-        Me chame agora pelo WhatsApp e receba sua cotação personalizada ainda
-        hoje. É rápido, gratuito e sem compromisso.
-      </p>
-      <a href="https://wa.me/5527995277207?text=Olá!%20Gostaria%20de%20uma%20cotação%20de%20plano%20de%20saúde"
-        class="btn-wpp" target="_blank">
-        <svg viewBox="0 0 24 24">
-          <path
-            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 a01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 a01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 a012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 a0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 a005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 a00-3.48-8.413z" />
-        </svg>
-        Falar no WhatsApp agora
+  <!-- CTA FINAL — sem formulário duplicado, leva de volta ao formulário do topo -->
+  <section class="cta-dark-section">
+    <div class="cta-dark-container" style="text-align:center;">
+      <div class="cta-header-text" style="margin-bottom:0;">
+        <span class="section-tag-gold">Cotação Gratuita & Sem Compromisso</span>
+        <h2>Pronto pra cuidar da sua saúde?</h2>
+        <p class="cta-sub">Leva menos de 1 minuto. Clique abaixo, preencha seus dados e receba seu comparativo agora.</p>
+      </div>
+      <a href="#cotacao-section" class="btn-hero-primary" style="display:inline-block;margin-top:28px;">
+        Quero minha cotação grátis →
       </a>
-      <br />
-      <a href="tel:+5527995277207" class="btn-tel">📞 Prefere ligar? (27) 99527-7207</a>
+      <p class="form-privacidade-dark" style="margin-top:20px;">
+        🔒 Seus dados estão seguros. Não enviamos spam.
+      </p>
     </div>
   </section>
 
@@ -384,7 +389,7 @@
     <p>
       RVC Assessoria · Consultor Rogério Vieira · Grande Vitória, ES<br />
       Corretor de Planos de Saúde credenciado · ANS<br />
-      © 2025 · Todos os direitos reservados
+      © 2026 · Todos os direitos reservados
     </p>
   </footer>
 
@@ -392,9 +397,14 @@
   <a href="https://wa.me/5527995277207?text=Olá!%20Gostaria%20de%20uma%20cotação%20de%20plano%20de%20saúde"
     class="wpp-float" target="_blank" title="Fale pelo WhatsApp">
     <svg viewBox="0 0 24 24">
-      <path d="M17.472 14.382c...z" />
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.671.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zM20.463 3.488A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
     </svg>
   </a>
+
+  <!-- BARRA FIXA MOBILE -->
+  <a href="#cotacao-section" class="mobile-cta-bar">Quero minha cotação grátis →</a>
+
   <script src="script.js" defer></script>
 </body>
 
